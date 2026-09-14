@@ -1,0 +1,39 @@
+@import "tailwindcss";
+
+/*
+  Descomplilearning brand theme.
+  Warm orange primary, cream/white surfaces, friendly blue accent.
+  Adult-learner tone: readable, calm, not childish.
+*/
+@theme {
+  --color-cream: #fdf6ec;
+  --color-cream-dark: #f5e9d8;
+  --color-surface: #ffffff;
+
+  --color-orange-100: #fbe3cc;
+  --color-orange-300: #f2b381;
+  --color-orange-500: #e8722c;
+  --color-orange-600: #c85e1e;
+  --color-orange-700: #a34917;
+
+  --color-blue-100: #dceaf5;
+  --color-blue-300: #8fbcdc;
+  --color-blue-500: #3e7cb1;
+  --color-blue-600: #2f6390;
+
+  --color-ink: #3a2e27;
+  --color-ink-soft: #6b5d53;
+
+  --color-success: #3f8f5f;
+  --color-error: #c0432f;
+
+  --font-sans: "Segoe UI", system-ui, -apple-system, Roboto, sans-serif;
+
+  --radius-card: 1.25rem;
+}
+
+body {
+  background-color: var(--color-cream);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+}
