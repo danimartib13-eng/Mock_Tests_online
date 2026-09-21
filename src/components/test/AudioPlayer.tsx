@@ -40,7 +40,7 @@ export function AudioPlayer({ src, maxPlays }: AudioPlayerProps) {
   }
 
   return (
-    <div className="rounded-card border-2 border-blue-100 bg-blue-100/40 p-4">
+    <div className="rounded-card border-2 border-blue-100 bg-blue-100/40 p-5 sm:p-6">
       <audio
         ref={audioRef}
         src={src}
@@ -48,24 +48,24 @@ export function AudioPlayer({ src, maxPlays }: AudioPlayerProps) {
         onTimeUpdate={handleTimeUpdate}
         onEnded={handleEnded}
       />
-      <div className="flex items-center gap-4">
+      <div className="flex items-center gap-5">
         <button
           type="button"
           onClick={handlePlay}
           disabled={!canPlay}
-          className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-blue-500 text-lg text-white disabled:bg-blue-300"
+          className="flex h-16 w-16 shrink-0 items-center justify-center rounded-full bg-blue-500 text-2xl text-white disabled:bg-blue-300"
           aria-label="Play audio"
         >
           &#9658;
         </button>
-        <div className="h-2 flex-1 overflow-hidden rounded-full bg-blue-100">
+        <div className="h-3 flex-1 overflow-hidden rounded-full bg-blue-100">
           <div
             className="h-full rounded-full bg-blue-500 transition-all"
             style={{ width: `${progress}%` }}
           />
         </div>
       </div>
-      <p className="mt-2 text-xs text-ink-soft">
+      <p className="mt-3 text-base font-medium text-ink-soft">
         {playsRemaining > 0
           ? `Plays remaining: ${playsRemaining} of ${maxPlays}`
           : "No plays remaining for this question."}

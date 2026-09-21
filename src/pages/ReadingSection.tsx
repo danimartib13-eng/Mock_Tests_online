@@ -14,9 +14,11 @@ export function ReadingSection() {
         );
         if (!passage) return null;
         return (
-          <div className="rounded-card bg-cream-dark/50 p-4 text-ink-soft">
-            <h2 className="mb-2 font-semibold text-ink">{passage.title}</h2>
-            <div className="max-h-72 overflow-y-auto whitespace-pre-line pr-1">
+          <div className="rounded-card bg-cream-dark/50 p-5 text-ink-soft sm:p-6">
+            <h2 className="text-section-title mb-3 text-ink">
+              {passage.title}
+            </h2>
+            <div className="text-passage whitespace-pre-line">
               {passage.text}
             </div>
           </div>

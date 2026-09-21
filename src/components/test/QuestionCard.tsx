@@ -18,7 +18,7 @@ export function QuestionCard({
       {"audio" in question && (
         <AudioPlayer src={question.audio.src} maxPlays={question.audio.maxPlays} />
       )}
-      <p className="whitespace-pre-line text-xl font-medium text-ink">
+      <p className="text-question whitespace-pre-line text-ink">
         {question.text}
       </p>
       <RadioGroup

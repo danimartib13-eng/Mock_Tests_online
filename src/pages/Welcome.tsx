@@ -22,28 +22,30 @@ export function Welcome() {
   return (
     <PageShell>
       <Card>
-        <h1 className="text-3xl font-bold text-ink">TECS Practice Mock Test</h1>
-        <p className="mt-3 text-ink-soft">{PRACTICE_SIMULATION_DISCLAIMER}</p>
-        <p className="mt-1 text-ink-soft">{SPEAKING_NOTE}</p>
+        <h1 className="text-page-title text-ink">TECS Practice Mock Test</h1>
+        <p className="text-instructions mt-4 text-ink-soft">
+          {PRACTICE_SIMULATION_DISCLAIMER}
+        </p>
+        <p className="text-instructions mt-1 text-ink-soft">{SPEAKING_NOTE}</p>
 
-        <form onSubmit={handleSubmit} className="mt-6 flex flex-col gap-4">
-          <label className="flex flex-col gap-1">
-            <span className="text-sm font-medium text-ink">Your name</span>
+        <form onSubmit={handleSubmit} className="mt-8 flex flex-col gap-5">
+          <label className="flex flex-col gap-2">
+            <span className="text-base font-medium text-ink">Your name</span>
             <input
               value={name}
               onChange={(event) => setName(event.target.value)}
               required
-              className="rounded-card border-2 border-cream-dark px-4 py-3 text-lg outline-none focus:border-orange-500"
+              className="rounded-card border-2 border-cream-dark px-5 py-4 text-xl outline-none focus:border-orange-500"
             />
           </label>
-          <label className="flex flex-col gap-1">
-            <span className="text-sm font-medium text-ink">Your email</span>
+          <label className="flex flex-col gap-2">
+            <span className="text-base font-medium text-ink">Your email</span>
             <input
               type="email"
               value={email}
               onChange={(event) => setEmail(event.target.value)}
               required
-              className="rounded-card border-2 border-cream-dark px-4 py-3 text-lg outline-none focus:border-orange-500"
+              className="rounded-card border-2 border-cream-dark px-5 py-4 text-xl outline-none focus:border-orange-500"
             />
           </label>
           <Button type="submit" className="mt-2 self-start">

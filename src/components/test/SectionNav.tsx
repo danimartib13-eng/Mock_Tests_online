@@ -26,11 +26,11 @@ export function SectionNav({
 
   return (
     <div className="flex flex-col gap-4">
-      <div className="flex items-center justify-between">
-        <span className="text-sm font-semibold text-orange-600">
+      <div className="flex flex-wrap items-center justify-between gap-2">
+        <span className="text-nav text-orange-600">
           {SECTION_LABELS[section]}
         </span>
-        <span className="text-sm text-ink-soft">
+        <span className="text-nav text-ink-soft">
           Question {currentNumber} of {totalQuestions}
         </span>
       </div>
